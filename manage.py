@@ -6,6 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
+    # This is to track git commit works
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myblogproject.settings')
     try:
         from django.core.management import execute_from_command_line
