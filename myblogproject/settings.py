@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-v@3o5+r8lx#4^u2y96ff1b=6r4m3#u7q$wt@m4z%iyx(3x&40%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000','https://mydjblog.azurewebsites.net/']
+ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000',os.environ['WEBSITE_HOSTNAME']]
 
 
 
