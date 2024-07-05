@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-v@3o5+r8lx#4^u2y96ff1b=6r4m3#u7q$wt@m4z%iyx(3x&40%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000',os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = ['127.0.0.1','127.0.0.1:8000']
 
 
 
@@ -116,6 +116,10 @@ DATABASES = {
 }
 
 
+
+database_url = 'postgresql://afrina:5028z7y3Fak6EKHlnYsvuSQdOkdY99ee@dpg-cq142nmehbks73enj9lg-a.singapore-postgres.render.com/blog_51mj'
+#  overwriting DATABASES variable
+DATABASES["default"] = dj_database_url.parse(database_url)
 
 
 
